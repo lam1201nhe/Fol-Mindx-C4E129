@@ -1,0 +1,104 @@
+body {
+  height: 1244px;
+  width: 1025px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: relative;
+}
+
+.nav_left {
+  display: flex;
+  align-items: center;
+}
+.social {
+  width: 82px;
+  height: 36px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 10px;
+}
+.left {
+  margin: 3px;
+}
+.left-underline a {
+  width: 18px;
+  height: 12px;
+  margin-left: 5px;
+}
+
+.nav_search {
+  width: 471px;
+  height: 29px;
+  border: 1px solid black;
+  margin-left: 150px;
+  position: relative;
+  border-radius: 2px;
+}
+.nav_search:hover {
+  background-color: rgba(255, 255, 255, 0.904);
+}
+.icon-search {
+  position: absolute;
+  top: 7px;
+  left: 4px;
+}
+.nav_right {
+  display: flex;
+  width: 720px;
+  justify-content: end;
+}
+
+.icon {
+  margin: 5px;
+}
+i {
+  color: black;
+}
+
+.nav_search input {
+  border: none;
+  height: 25px;
+  padding-left: 25px;
+  padding-top: 3px;
+  width: 300px;
+}
+input:active {
+  outline: none;
+}
+
+img {
+  border-radius: 50%;
+}
+.card_content {
+  font-size: 25px;
+  position: relative;
+  
+}
+.card_content h1 {
+  position: absolute;
+  left: 5%;
+  top: 0%;
+}
+.speakers{
+    margin-bottom: 30px;
+}
+
+.person1_left {
+  width: 238.25px;
+  height: 296px;
+  background-color: #e2e2e2;
+  border-radius: 16px;
+}
+
+.card_person1 {
+  width: 476.5px;
+  height: 296px;
+  background: #FFD38A;
+  border-radius: 20px;
+}

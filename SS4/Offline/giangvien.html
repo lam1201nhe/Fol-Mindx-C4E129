@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+
+        /* Giúp đảm bảo chiều rộng của thẻ không bị thay đổi
+             khi dùng padding, margin ở 1 mức nào đó */
+        /* box-sizing: border-box; */
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+
+      .box-1 {
+        background-color: red;
+        /* padding-left: 10px; */
+        /* Short hand 
+            Trên - phải - dưới - trái
+            */
+        /* padding: 10px 5px 10px 9px; */
+        /* hai giá trị: trên dưới - trái phải */
+        padding: 20px 5px;
+        margin-bottom: 10px;
+      }
+
+      .box-2 {
+        background-color: blue;
+      }
+
+      .relative {
+        background-color: black;
+        /* Thay doi x don vi so voi vi tri ban dau */
+        position: relative;
+        margin-left: 10px;
+      }
+
+      .absolute {
+        background-color: green;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left:5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-1">anh yeue em rat nhieueue</div>
+    <div class="box box-2">adhsd</div>
+
+    <div class="box relative">
+      <div class="absolute">
+        
+      </div>
+    </div>
+  </body>
+</html>

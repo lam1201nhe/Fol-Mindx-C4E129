@@ -1,0 +1,22 @@
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.section_hello {
+  background-color: pink;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5em;
+}
+
+img{
+    min-width: 300px;
+}
+
+.container p:nth-child(2){
+    font-size: 12px;
+}
+
+.container > p {
+    font-style: italic;
+}
