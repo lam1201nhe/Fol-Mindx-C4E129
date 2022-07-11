@@ -16,38 +16,55 @@
 
       //----------------------------------- Lời giải ---------------------------
       //Bài 1:
-      let number = Number(prompt("Enter a number: "));
-      if (number == 0) {
-        document.write(`${number} không phải số âm cũng không phải số dương`);
-      } else if (number > 0) {
-        document.write(`${number} là một số dương`);
-      } else document.write(`${number} là một số âm`);
+      // let number = Number(prompt("Enter a number: "));
+      // if (number == 0) {
+      //   document.write(`${number} không phải số âm cũng không phải số dương`);
+      // } else if (number > 0) {
+      //   document.write(`${number} là một số dương`);
+      // } else document.write(`${number} là một số âm`);
 
       //Bài 2:
-      let number1 = Number(prompt("Enter a number1: "));
-      let check = 0;
-      if(number1 < 2) {
-        check = 1;
-      }
-      for (let i = 2; i <= Math.sqrt(number1); i++) {
-        if ((number1 % i)==0) {
-          check = 1;
-          break;
-        }
-      }
-      if (check == 0) {
-        document.write(`${number1} là một số nguyên tố`);
-      } else {
-        document.write(`${number1} không phải là một số nguyên tố`);
-      }
+      // let number1 = Number(prompt("Enter a number1: "));
+      // let check = 0;
+      // if(number1 < 2) {
+      //   check = 1;
+      // }
+      // for (let i = 2; i <= Math.sqrt(number1); i++) {
+      //   if ((number1 % i)==0) {
+      //     check = 1;
+      //     break;
+      //   }
+      // }
+      // if (check == 0) {
+      //   document.write(`${number1} là một số nguyên tố`);
+      // } else {
+      //   document.write(`${number1} không phải là một số nguyên tố`);
+      // }
 
       //Bai 3:
-      let string = prompt("Enter a string: ");
-      let sub1 = "a";
-      let sub2 = 'i';
-      document.write(`Dãy vừa nhập là: ` + string + "<br>");
-      document.write('Dãy vừa nhập có ' + (string.split(sub1).length-1) + ' chữ "a" <br> ');
-      document.write('Dãy vừa nhập có ' + (string.split(sub2).length-1) + ' chữ "i" ');
+      // let string = prompt("Enter a string: ");
+      // let sub1 = "a";
+      // let sub2 = 'i';
+      // document.write(`Dãy vừa nhập là: ` + string + "<br>");
+      // document.write('Dãy vừa nhập có ' + (string.split(sub1).length-1) + ' chữ "a" <br> ');
+      // document.write('Dãy vừa nhập có ' + (string.split(sub2).length-1) + ' chữ "i" ');
+
+      //Bafi 3: Cach 2
+      function countChars(str){
+      let countA = 0;
+      let countB = 0;
+      for(let i = 0; i < str.length; i++){
+        if(str[i] === 'a'){
+          countA++;
+
+        }else if(str[i] === 'i'){
+          countB++;
+        }
+      }
+      console.log(`${countA}`);
+      console.log(`${countB}`);
+
+      }
 
 
     </script>

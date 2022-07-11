@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.Cho 1 đoạn string, chuyển các kí tự trong string thành vị trí của nó trong bảng chữ cái Ví dụ: "The sunset sets at twelve o' clock." => "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" => Bài tập này cần search gg thêm, còn search gì mn nghĩ thử xem ヾ(•ω•`)o
+
+      // Cho 1 đoạn string, biết các kí tự được chia thành 2 phe (trái và phải) Một số kí tự ở 2 phe mang trong mình sức mạnh, các kí tự khác không có giá trị
+      // LEFT: w - 4 p - 3 b - 2 s - 1
+      //RIGHT: m - 4 q - 3 d - 2 z - 1
+      //Biết kí tự * trong string sẽ tiêu diệt các kí tự bên cạnh nó Hãy đưa ra thông báo kết quả phe nào thắng/thua
+      // Ví dụ: "szz" => Right side wins! "wwwwww****z" => Left side wins!
+
+      // Gợi ý cho tất cả bài tập: Chúng ta có thể truy cập vào 1 kí tự của string thông qua chỉ số Ví dụ có string example = "abcdef" => example[0] = a example[1] = b
+      // ...
+      let string = "due";
+
+      console.log(string.split("u").length - 1);
+    </script>
+  </body>
+</html>
