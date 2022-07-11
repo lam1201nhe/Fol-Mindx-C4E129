@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    //   let con = 18;
+    //   let a = con > 18 ? "Too old" : "Not old enough";
+    //   console.log(a);
+
+    //   for (let i = 1; i < 10; i++) {
+    //     if (i == 0) {
+    //       console.log(`This is over`);
+    //       break;
+    //     } else {
+    //       console.log(`no end`);
+    //     }
+    //   }
+
+    //   let text = "";
+    //   let i = 0;
+
+      //   WHILE LOOPS
+      // while (i <= 10) {
+      //     text += `the new ${i} \n`;
+      //     i++;
+
+      // }
+      // console.log(text);
+
+      /* DO-WHILE LOOPS*/
+    //   do {
+    //     text += `the new ${i} \n`;
+    //     i++;
+    //   } while (i < 10);
+    //   console.log(text);
+
+    //   let day;
+    //   day = new Date().getDay();
+    //   console.log(day);
+    //   switch (day) {
+    //     case 0:
+    //       day = `MONDAY`;
+    //       break;
+    //     case 5:
+    //       day = `FRIDAY`;
+    //       break;
+    //     default:
+    //       console.log("No date");
+    //       break;
+    //   }
+
+    //   console.log(day);
+
+      // ----------------------------------------------------------------ư
+    //   while(true){
+    //     let b = prompt("What's time");
+    //     alert("i dont luv u");
+
+    //     if(b == null || b == 'y'){
+    //         break;
+    //     }
+    //   }
+        
+
+    //--------
+    /* Bài 1: Tính tổng các số từ 0 đến 30 */
+    let tong =0 ;
+        for(let i=1; i<=30; i++){
+            tong+=i;
+        }
+
+        console.log(tong);
+
+    //Bài 2: tính tổng các số chắn từ 0 - 75
+
+    let tong1 = 0 ;
+    for(let i=0; i<= 75; i++){
+        if(i%2==0){
+            tong1+=i;
+        }
+    }
+    console.log(tong1);
+    // bài 3: in ra tam giác vuông (cho hình ảnh sau)
+
+    document.write("*<br>");    
+    for(let i=0; i<=10; i++){
+        for(let j=0; j<=i+1; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+        
+    }
+
+    //Bài 4: Tính tổng cân (cho hanh sau)
+    
+    </script>
+  </body>
+</html>
