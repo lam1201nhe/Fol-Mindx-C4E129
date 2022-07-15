@@ -8,19 +8,176 @@
   </head>
   <body>
     <script>
-      // 1.Cho 1 đoạn string, chuyển các kí tự trong string thành vị trí của nó trong bảng chữ cái Ví dụ: "The sunset sets at twelve o' clock." => "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" => Bài tập này cần search gg thêm, còn search gì mn nghĩ thử xem ヾ(•ω•`)o
+      // 1.Cho 1 đoạn string, chuyển các kí tự trong string thành vị trí của nó trong bảng chữ cái
+      // Ví dụ: "The sunset sets at twelve o' clock."
+      // => "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+      // => Bài tập này cần search gg thêm, còn search gì mn nghĩ thử xem ヾ(•ω•`)o
 
-      // Cho 1 đoạn string, biết các kí tự được chia thành 2 phe (trái và phải) Một số kí tự ở 2 phe mang trong mình sức mạnh, các kí tự khác không có giá trị
-      // LEFT: w - 4 p - 3 b - 2 s - 1
-      //RIGHT: m - 4 q - 3 d - 2 z - 1
-      //Biết kí tự * trong string sẽ tiêu diệt các kí tự bên cạnh nó Hãy đưa ra thông báo kết quả phe nào thắng/thua
-      // Ví dụ: "szz" => Right side wins! "wwwwww****z" => Left side wins!
+      //Cach 1:
+      // while (true) {
+      //   let string = prompt("Xâu muốn nhập: ");
+      //   let str2 = string.split(" ");
+      //   let str3 = str2.join("");
+      //   str3 = str3.toUpperCase();
 
-      // Gợi ý cho tất cả bài tập: Chúng ta có thể truy cập vào 1 kí tự của string thông qua chỉ số Ví dụ có string example = "abcdef" => example[0] = a example[1] = b
-      // ...
-      let string = "due";
+      //   document.write(str3);
+      //   let result = "";
+      //   for (let i = 0; i < str3.length; i++) {
+      //     result += str3.charCodeAt(i) - 64 + " ";
+      //   }
+      //   alert(result);
+      // }
 
-      console.log(string.split("u").length - 1);
+      //Cach 2;
+      // while(true){
+      //   let result = '';
+      //   let str = prompt("Xâu cần nhập: ").replace(/\W/g,'').toUpperCase();
+      //   for(let i=0; i<str.length; i++){
+      //     result += (str.charCodeAt(i) - 64) + ' ';
+      //   }
+      //   alert(result);
+      // }
+
+      /* 
+      `2. Cho 1 đoạn string, biết các kí tự được chia thành 2 phe (trái và phải)
+Một số kí tự ở 2 phe mang trong mình sức mạnh, các kí tự khác không có giá trị  
+LEFT:
+    w - 4
+    p - 3 
+    b - 2
+    s - 1
+RIGHT:
+    m - 4
+    q - 3 
+    d - 2
+    z - 1
+Biết kí tự * trong string sẽ tiêu diệt các kí tự bên cạnh nó 
+Hãy đưa ra thông báo kết quả phe nào thắng/thua
+Ví dụ: "s*zz" => Right side wins!
+       "www*www****z" => Left side wins!
+Gợi ý cho tất cả bài tập: Chúng ta có thể truy cập vào 1 kí tự của string thông qua chỉ số 
+Ví dụ có string example = "abcdef" => example[0] = a
+                                      example[1] = b    
+                                      ...
+      */
+     //cach 1:
+      // while (true) {
+      //   let str = prompt("Nhập xâu: ").replace(/\s+/g,"");
+      //   let left = 0,
+      //     right = 0;
+      //   for (let i = 0; i < str.length; i++) {
+      //     switch (str[i]) {
+      //       case "w":
+      //         left += 4;
+      //         break;
+      //       case "p":
+      //         left += 3;
+      //         break;
+      //       case "b":
+      //         left += 2;
+      //         break;
+      //       case "s":
+      //         left += 1;
+      //         break;
+      //       case "m":
+      //         right += 4;
+      //         break;
+      //       case "q":
+      //         right += 3;
+      //         break;
+      //       case "d":
+      //         right += 2;
+      //         break;
+      //       case "z":
+      //         right += 1;
+      //         break;
+      //       case "*":
+      //         if (
+      //           str[i - 1] == "w" ||
+      //           str[i - 1] == "p" ||
+      //           str[i - 1] == "b" ||
+      //           str[i - 1] == "s"
+      //         ) {
+      //           left -= 1;
+      //         }
+      //         if (
+      //           str[i + 1] == "w" ||
+      //           str[i + 1] == "p" ||
+      //           str[i + 1] == "b" ||
+      //           str[i + 1] == "s"
+      //         ) {
+      //           left -= 1;
+      //         }
+      //         if (
+      //           str[i - 1] == "m" ||
+      //           str[i - 1] == "q" ||
+      //           str[i - 1] == "d" ||
+      //           str[i - 1] == "z"
+      //         ) {
+      //           right -= 1;
+      //         }
+      //         if (
+      //           str[i + 1] == "m" ||
+      //           str[i + 1] == "q" ||
+      //           str[i + 1] == "d" ||
+      //           str[i + 1] == "z"
+      //         ) {
+      //           right -= 1;
+      //         }
+      //         break;
+      //     }
+      //   }
+      //   document.write('left ' + left + '<br>');
+      //   document.write('right: ' + right);
+
+      //   if (left > right) {
+      //     console.log("LEFT WINS");
+      //   } else if (left < right) {
+      //     console.log("RIGHT WINS");
+      //   } else if (left == right) {
+      //     console.log("EQUALS");
+      //   } else {
+      //     console.log("Th dac biet");
+      //   }
+      // }
+
+
+      //cach 2: cach lam out trinh
+      while (true) {
+            let str = prompt("Nhập vào một xâu: ").replace(/\*+/g,'*').replace(/.\*./g,'');
+            let left = 0;
+            let right = 0;
+            for (let i = 0; i < str.length; i++) {
+                switch (str[i]) {
+                    case 'w':
+                        left += 4;
+                        break;
+                    case 'p':
+                        left += 3;
+                        break;
+                    case 'b':
+                        left += 2;
+                        break;
+                    case 's':
+                        left += 1;
+                        break;
+                    case 'm':
+                        right += 4;
+                        break;
+                    case 'q':
+                        right += 3;
+                        break;
+                    case 'd':
+                        right += 2;
+                        break;
+                    case 'z':
+                        right += 1;
+                        break;
+                }
+            }
+            right > left ? alert("Right side wins!") : left > right ? alert("Left side wins!") : alert("Draw!");
+            console.log(str);
+        }
     </script>
   </body>
 </html>

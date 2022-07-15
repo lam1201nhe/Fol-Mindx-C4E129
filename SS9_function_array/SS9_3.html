@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 3. Cho mảng [1,2,3,4,5,6,7,8,9]. Hãy sử dụng các phương thức đã học để
+          3.1. Thu dc 1 mảng mới [4,5,6] không ảnh hưởng mảng ban đầu
+          3.2. Thay đổi mảng ban đầu thành [1,2,3,5]
+          3.3. Thu được mảng mới mà tại đó giá trị các phần tử trong mảng x2 */
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      //3.1 -- giai
+      let newarr = arr.slice(3, 6);
+      alert(newarr);
+
+      //3.2 -- giai
+      let newarr1 = arr.splice(3, 1) + "," + arr.splice(4, 4);
+      alert("New arr get from first arr: " + newarr1);
+      alert("First arr: " + arr);
+
+      //3.3 -- giai
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * 2;
+      }
+      alert("New arr get from second arr: " + arr);
+    </script>
+  </body>
+</html>

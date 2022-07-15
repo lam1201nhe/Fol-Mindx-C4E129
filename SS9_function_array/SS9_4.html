@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // # Bài tập nâng cao
+      // 1. Define a function called cleanNames that accepts an array of strings containing additional space characters at the beginning and end. The cleanNames() function should use the array map method to return a new array full of trimmed names
+      // Ví dụ
+      // Input: cleanNames([" avengers", "   captain_america", "ironman   ", " black panther   "])
+
+      // Output: ["avengers", "captain_america", "ironman", "black panther"]
+
+      function cleanNames(strings){
+        for(let i=0; i<strings.length; i++){
+            strings[i] = strings[i].trimStart()
+            strings[i] = strings[i].trimEnd()
+        }
+        document.write("New strings: ")
+        for(let i of strings){
+            document.write('"' + i  +'"  ' )
+        }
+    }
+      let strings = [" avengers", "   captain_america", "ironman   ", " black panther   "]
+      cleanNames(strings);
+
+
+
+
+    </script>
+  </body>
+</html>

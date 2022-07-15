@@ -50,9 +50,53 @@
         console.log(arr1)
         console.log(newarr);
 
-    
+        //make an array of numbers from 1 to 10
+        let arr2 = [];
+        for(let i=1; i<=10; i++){
+            arr2.push(i);
+        }
+        console.log(arr2);
         
+        //bubble sort
+        let arr3 = [5,4,3,2,1];
+        for(let i=0; i<arr3.length; i++){
+            for(let j=0; j<arr3.length-1; j++){
+                if(arr3[j]>arr3[j+1]){
+                    let temp = arr3[j];
+                    arr3[j] = arr3[j+1];
+                    arr3[j+1] = temp;
+                }
+            }
+        }
+        console.log(arr3);
 
+        //selection sort
+        let arr4 = [5,4,3,2,1];
+        for(let i=0; i<arr4.length; i++){
+            let min = i;
+            for(let j=i+1; j<arr4.length; j++){
+                if(arr4[j]<arr4[min]){
+                    min = j;
+                }
+            }
+            if(min!=i){
+                let temp = arr4[i];
+                arr4[i] = arr4[min];
+                arr4[min] = temp;
+            }
+        }
+        console.log(arr4);
+
+        //delete all elements in an array
+        let arr5 = [1,2,3,4,5,6];
+        arr5.length = 0;
+        console.log(arr5);
+
+        //make a function name getName() that returns your name
+        function getName(){
+            return "Nguyen Van A";
+        }
+        console.log(getName());
 
 
     </script>

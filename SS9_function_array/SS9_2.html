@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    /* # Bài tập bắt buộc
+      1. Tự thực hành lại CRUD trong array (không cần nộp)
+      2. Cho mảng số [1,5,8,4,9]
+      Hãy tính tổng các phần tử trong mảng trên
+      */
+        
+          
+      //Bai 2:
+        let tong0 = 0;
+        let arr0 = [1,5,8,4,9];
+        //Cach1:
+          for(let i of arr0){
+            tong0 += i
+          }
+          alert(tong0);
+          
+        //Cach2: 
+          arr0.forEach((item) => {
+            tong0+=item;
+          })
+          alert('This is' + tong0);
+    
+    </script>
+  </body>
+</html>
