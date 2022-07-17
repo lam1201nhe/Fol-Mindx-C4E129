@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="SS11_3.js"></script>
+    <script>
+        //Bai tap co ban
+        console.log('The population of Vietnam is: ' + countriesVac[0].Vietnam.All.population);
+        console.log('The capital of Vietnam is: ' + countriesVac[0].Vietnam.All.capital_city);
+        console.log('Deaths by Covid in Vietnam are: ' + countriesCase[0].Vietnam.All.deaths);
+        console.log('Confirmed by Covid in Vietnam are: ' + countriesCase[0].Vietnam.All.confirmed);
+        console.log('Recovered by Covid in Vietnam are: ' + countriesCase[0].Vietnam.All.recovered);
+        console.log('The number of people who were vaccinated on global is: ' + countriesVac[0].Global.All.people_vaccinated);
+    </script>
+    <script>
+        //Bai 1:
+let twelveCountries = [countriesVac[0].Afghanistan, countriesVac[0].Albania, countriesVac[0].Angola, countriesVac[0].Argentina, countriesVac[0].Japan, countriesVac[0].Chile, countriesVac[0].China, countriesVac[0].France, countriesVac[0].Germany, countriesVac[0].India, countriesVac[0].Italy, countriesVac[0].Iran];
+        mostPopulousCountry = (twelveCountries) => {
+            let max = twelveCountries.length-1;
+            let maxCoun = '';
+            for(let pop of twelveCountries){
+                if(pop.All.population > max){
+                    max = pop.All.population;
+                    maxCoun = pop;
+                }
+            }
+            return maxCoun;
+        }
+        console.log(mostPopulousCountry(twelveCountries));
+
+
+//Bai 2:
+    bubbleSortAsc = (twelveCountries) => {
+            for(let i=0; i < twelveCountries.length; i++){
+                for(let j=0; j < twelveCountries.length-1-i; j++){
+                    if(twelveCountries[j].All.country.charCodeAt(0) > twelveCountries[j+1].All.country.charCodeAt(0)){
+                        let temp = twelveCountries[j];
+                        twelveCountries[j] = twelveCountries[j+1];
+                        twelveCountries[j+1] = temp;
+                    }
+                    
+                }
+            }
+            return twelveCountries;
+        }
+        console.log(bubbleSortAsc(twelveCountries));
+            
+
+    </script>
+</body>
+</html>

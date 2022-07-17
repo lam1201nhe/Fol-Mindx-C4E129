@@ -64,8 +64,10 @@
 //     return total;
 // }
 // let string = 'anh yeu em nhieu lam'
-// let char = 'r'
+// let char = 'e'
 // console.log(timKytu(string, char));
+
+
 
 //Bai 7.5.1
 
@@ -121,9 +123,27 @@
 // }
 
 // console.log(insertValue(['hoa','hien','chien','toan'],'chien','hieu'))
-let string = ['Lan', 'Điệp', 'Ngọc','Ngạn', 'Trinh']
-newstring = string.splice(4,1,"An",'Trinh');
-console.log(string)
+// let string = ['Lan', 'Điệp', 'Ngọc','Ngạn', 'Trinh']
+// newstring = string.splice(4,1,"An",'Trinh');
+// console.log(string)
+
+
+/*
+Ex7.8: Cho 1 mảng học sinh: arrStudents = [‘Lan’, ‘Điệp’, ‘Ngọc’,’Ngạn’, ‘Trinh’];
+		+ Thêm ‘An’ vào sau ‘Ngạn’ -> Hiển thị [‘Lan’, ‘Điệp’, ‘Ngọc’,’Ngạn’, ‘An’, ‘Trinh’];
+		+ Xóa ‘Ngọc’ -> hiển thị [‘Lan’, ‘Điệp’,,’Ngạn’, ‘Trinh’];
+		+ Tìm kiếm và hiển thị vị trí của người tên là Trinh  trong mảng
+		+ Cập nhật ‘Lan’ thành ‘Phú’ -> Hiển thị [‘Phú, ‘Điệp’, ‘Ngọc’,’Ngạn’, ‘Trinh’];
+
+*/ 
+
+//Bai 7.8.a
+let arrStudents = [`Lan`, `Điệp`, `Ngọc`,`Ngạn`, `Trinh`];
+let indexOfNgan = arrStudents.indexOf('Ngạn');
+arrStudents.splice(indexOfNgan + 1,0,"An");
+console.log(arrStudents);
+
+
 
 
 
