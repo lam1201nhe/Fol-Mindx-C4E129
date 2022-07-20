@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="formLogin">
+      <input type="text" id="text" placeholder="Enter your username" /><br />
+      <span></span>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+      /><br />
+      <span></span>
+      <button onClick="signIn()">Đăng nhập</button>
+      <span id="error"></span>
+    </form>
+
+    <script>
+      const user = [
+        {
+          username: "admin",
+          password: "admin",
+        },
+        {
+          username: "user",
+          password: "user",
+        },
+      ];
+
+      signIn = () => {
+        let username = document.getElementById("text").value;
+        let password = document.getElementById("password").value;
+        let error = document.getElementById("error");
+        let formLogin = document.getElementById("formLogin");
+        formLogin.addEventListener("submit", (e) => {
+          e.preventDefault();
+          for(let u of user) {
+          if (username === u.username && password === u.password) {
+            error.innerHTML = "Login Successfully!!";
+            break;
+          } else {
+            error.innerHTML = "Login Failed!!";
+            break;
+          }
+      }});
+      };
+    </script>
+  </body>
+</html>

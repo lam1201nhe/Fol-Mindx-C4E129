@@ -1,5 +1,4 @@
-const countriesVac = [
-    vaccines = {
+const Vaccines = {
         "Afghanistan": {
             "All": {
                 "administered": 6445359,
@@ -5944,7 +5943,6 @@ const countriesVac = [
             }
         }
     }
-]
 
 
 
@@ -5953,8 +5951,7 @@ const countriesVac = [
 
 
 //--------------
-const countriesCase = [
-    cases = {
+const Cases = {
         "Afghanistan": {
             "All": {
                 "confirmed": 183445,
@@ -14636,8 +14633,7 @@ const countriesCase = [
                 "deaths": 6368794
             }
         }
-    }
-]
+}
 
 
 
